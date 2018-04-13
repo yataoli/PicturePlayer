@@ -10,7 +10,7 @@
 
 @implementation PicturePlayer
 
--(instancetype)initWithFrame:(CGRect)frame
+-(instancetype)initWithFrame:(CGRect)frame andImageArray:(NSArray *)imageArray
 {
     self = [super initWithFrame:frame];
     if (self)
@@ -36,8 +36,21 @@
         _scrollView.contentOffset = CGPointMake(self.frame.size.width, 0);
         _scrollView.delegate  = self;
         //设置scrollView上的内容
-        [self setContentInScrollView:_scrollView];
+        
+        self.imageNameArray = imageArray;
         [self addSubview:_scrollView];
+        [self setContentInScrollView:_scrollView];
+        
+        // pageControl
+        self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, _scrollView.frame.size.height - 30, _scrollView.frame.size.width / 2, 30)];
+        self.pageControl.center = CGPointMake(_scrollView.frame.size.width / 2.0, _scrollView.frame.size.height - 30);
+        self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+        self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+        
+        
+        [self addSubview:self.pageControl];
+        self.pageControl.numberOfPages = self.imageNameArray.count;
+        
         [self addTimer];
     }
     return self;
@@ -60,11 +73,32 @@
 - (void)setContentInScrollView:(UIScrollView *)scrollView
 {
     UIImageView *imageView = [scrollView viewWithTag:1];
-    imageView.image = [UIImage imageNamed:_imageNameArray[_pageIndex - 1 < 0 ? _imageNameArray.count - 1 : _pageIndex - 1]];
+    NSString *imageNameString = _imageNameArray[_pageIndex - 1 < 0 ? _imageNameArray.count - 1 : _pageIndex - 1];
+    if ([self isUrlString:imageNameString]) {
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageNameString]];
+    }else{
+        imageView.image = [UIImage imageNamed:imageNameString];
+    }
+    
+    
+    
     imageView = [scrollView viewWithTag:2];
-    imageView.image = [UIImage imageNamed:_imageNameArray[_pageIndex]];
+    imageNameString = _imageNameArray[_pageIndex];
+    if ([self isUrlString:imageNameString]) {
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageNameString]];
+    }else{
+        imageView.image = [UIImage imageNamed:imageNameString];
+    }
+    
+    
+    
     imageView = [scrollView viewWithTag:3];
-    imageView.image = [UIImage imageNamed:_imageNameArray[_pageIndex + 1 == _imageNameArray.count ? 0 : _pageIndex + 1]];
+    imageNameString = _imageNameArray[_pageIndex + 1 == _imageNameArray.count ? 0 : _pageIndex + 1];
+    if ([self isUrlString:imageNameString]) {
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageNameString]];
+    }else{
+        imageView.image = [UIImage imageNamed:imageNameString];
+    }
 }
 #pragma mark - 返回所点击图片在数组中的索引
 - (void)tapGesture:(UITapGestureRecognizer *)gesture
@@ -99,6 +133,7 @@
             }
             [self setContentInScrollView:scrollView];
         }
+        self.pageControl.currentPage = _pageIndex;
     }
 }
 #pragma mark - 带动画的滑动结束后才会调用(手滑动的时候不会调用该方法)
@@ -126,6 +161,7 @@
             }
             [self setContentInScrollView:scrollView];
         }
+        self.pageControl.currentPage = _pageIndex;
     }
 }
 #pragma mark - scrollView将要开始拖动的时候
@@ -142,5 +178,11 @@
 {
     [self addTimer];
 }
-
+#pragma mark - 正则匹配URL
+- (BOOL)isUrlString:(NSString *)str{
+    NSString *pattern = @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))";
+    NSPredicate *pred = [NSPredicate predicateWithFormat: @"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:str];
+    return isMatch;
+}
 @end

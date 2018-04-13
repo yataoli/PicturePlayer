@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4117FFE560124E675B63FD21 /* libPods-PicturePlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F9C3B518930637BD612B0E /* libPods-PicturePlay.a */; };
 		8A0990861D4222BF00BA270E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0990851D4222BF00BA270E /* main.m */; };
 		8A0990891D4222BF00BA270E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0990881D4222BF00BA270E /* AppDelegate.m */; };
 		8A09908C1D4222BF00BA270E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A09908B1D4222BF00BA270E /* ViewController.m */; };
@@ -15,8 +16,6 @@
 		8A0990941D4222BF00BA270E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0990921D4222BF00BA270E /* LaunchScreen.storyboard */; };
 		8A09909F1D4222BF00BA270E /* PicturePlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A09909E1D4222BF00BA270E /* PicturePlayTests.m */; };
 		8A0990AA1D4222BF00BA270E /* PicturePlayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0990A91D4222BF00BA270E /* PicturePlayUITests.m */; };
-		8A0990BC1D4222EF00BA270E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A0990B71D4222EF00BA270E /* 1.jpg */; };
-		8A0990BD1D4222EF00BA270E /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A0990B81D4222EF00BA270E /* 2.jpg */; };
 		8A0990BE1D4222EF00BA270E /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A0990B91D4222EF00BA270E /* 3.jpg */; };
 		8A0990BF1D4222EF00BA270E /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A0990BA1D4222EF00BA270E /* 4.jpg */; };
 		8A0990C01D4222EF00BA270E /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A0990BB1D4222EF00BA270E /* 5.jpg */; };
@@ -41,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2286B2054B9E585B94F8C31C /* Pods-PicturePlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicturePlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicturePlay/Pods-PicturePlay.release.xcconfig"; sourceTree = "<group>"; };
+		46584DCC848D142090FC127F /* Pods-PicturePlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicturePlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicturePlay/Pods-PicturePlay.debug.xcconfig"; sourceTree = "<group>"; };
+		47F9C3B518930637BD612B0E /* libPods-PicturePlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PicturePlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0990811D4222BF00BA270E /* PicturePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicturePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0990851D4222BF00BA270E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A0990871D4222BF00BA270E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,8 +59,6 @@
 		8A0990A51D4222BF00BA270E /* PicturePlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicturePlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0990A91D4222BF00BA270E /* PicturePlayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicturePlayUITests.m; sourceTree = "<group>"; };
 		8A0990AB1D4222BF00BA270E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A0990B71D4222EF00BA270E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		8A0990B81D4222EF00BA270E /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		8A0990B91D4222EF00BA270E /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		8A0990BA1D4222EF00BA270E /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		8A0990BB1D4222EF00BA270E /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
@@ -71,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4117FFE560124E675B63FD21 /* libPods-PicturePlay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		468CB9BD43000CB973A83ED8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47F9C3B518930637BD612B0E /* libPods-PicturePlay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A0990781D4222BF00BA270E = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +107,8 @@
 				8A09909D1D4222BF00BA270E /* PicturePlayTests */,
 				8A0990A81D4222BF00BA270E /* PicturePlayUITests */,
 				8A0990821D4222BF00BA270E /* Products */,
+				8F610F0B2744A03138734D30 /* Pods */,
+				468CB9BD43000CB973A83ED8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,8 +125,6 @@
 		8A0990831D4222BF00BA270E /* PicturePlay */ = {
 			isa = PBXGroup;
 			children = (
-				8A0990B71D4222EF00BA270E /* 1.jpg */,
-				8A0990B81D4222EF00BA270E /* 2.jpg */,
 				8A0990B91D4222EF00BA270E /* 3.jpg */,
 				8A0990BA1D4222EF00BA270E /* 4.jpg */,
 				8A0990BB1D4222EF00BA270E /* 5.jpg */,
@@ -160,6 +169,15 @@
 			path = PicturePlayUITests;
 			sourceTree = "<group>";
 		};
+		8F610F0B2744A03138734D30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46584DCC848D142090FC127F /* Pods-PicturePlay.debug.xcconfig */,
+				2286B2054B9E585B94F8C31C /* Pods-PicturePlay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A0990AE1D4222BF00BA270E /* Build configuration list for PBXNativeTarget "PicturePlay" */;
 			buildPhases = (
+				38583642B81440D6E9498EE9 /* [CP] Check Pods Manifest.lock */,
 				8A09907D1D4222BF00BA270E /* Sources */,
 				8A09907E1D4222BF00BA270E /* Frameworks */,
 				8A09907F1D4222BF00BA270E /* Resources */,
+				C28DB15850F058557708D023 /* [CP] Embed Pods Frameworks */,
+				FC7B8E2D110F3773FD0CB03B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,6 +248,7 @@
 				TargetAttributes = {
 					8A0990801D4222BF00BA270E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KM92J7XX6C;
 					};
 					8A0990991D4222BF00BA270E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -266,8 +288,6 @@
 				8A0990941D4222BF00BA270E /* LaunchScreen.storyboard in Resources */,
 				8A0990C01D4222EF00BA270E /* 5.jpg in Resources */,
 				8A0990BF1D4222EF00BA270E /* 4.jpg in Resources */,
-				8A0990BC1D4222EF00BA270E /* 1.jpg in Resources */,
-				8A0990BD1D4222EF00BA270E /* 2.jpg in Resources */,
 				8A0990BE1D4222EF00BA270E /* 3.jpg in Resources */,
 				8A0990911D4222BF00BA270E /* Assets.xcassets in Resources */,
 				8A09908F1D4222BF00BA270E /* Main.storyboard in Resources */,
@@ -289,6 +309,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38583642B81440D6E9498EE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicturePlay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C28DB15850F058557708D023 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicturePlay/Pods-PicturePlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7B8E2D110F3773FD0CB03B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicturePlay/Pods-PicturePlay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A09907D1D4222BF00BA270E /* Sources */ = {
@@ -439,8 +510,10 @@
 		};
 		8A0990AF1D4222BF00BA270E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46584DCC848D142090FC127F /* Pods-PicturePlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KM92J7XX6C;
 				INFOPLIST_FILE = PicturePlay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = come.suge.PicturePlay;
@@ -450,8 +523,10 @@
 		};
 		8A0990B01D4222BF00BA270E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2286B2054B9E585B94F8C31C /* Pods-PicturePlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KM92J7XX6C;
 				INFOPLIST_FILE = PicturePlay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = come.suge.PicturePlay;
@@ -524,6 +599,7 @@
 				8A0990B01D4222BF00BA270E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A0990B11D4222BF00BA270E /* Build configuration list for PBXNativeTarget "PicturePlayTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +608,7 @@
 				8A0990B31D4222BF00BA270E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A0990B41D4222BF00BA270E /* Build configuration list for PBXNativeTarget "PicturePlayUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +617,7 @@
 				8A0990B61D4222BF00BA270E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
